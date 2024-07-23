@@ -1,24 +1,37 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column             |Type           |Options                        |
+|-------------------|---------------|-------------------------------|
+|nickname           |string         |null: false                    |
+|email              |string         |null: false, unique: true      |
+|encrypted_password |string         |null: false                    |
+|name               |string         |null: false                    |
+|branch             |integer        |null: false                    |
+|office             |integer        |null: false                    |
 
-Things you may want to cover:
+has_many :hiyarihatts
+has_many :comments
 
-* Ruby version
+## hiyarihatts テーブル
 
-* System dependencies
+|Column             |Type           |Options                        |
+|-------------------|---------------|-------------------------------|
+|type               |integer        |null: false                    |
+|title              |text           |null: false                    |
+|detail             |text           |null: false                    |
+|cause              |text           |null: false                    |
+|measures           |text           |null: false                    |
+|user               |references     |null: false, foreign_key: true |
 
-* Configuration
+belongs_to :user
+has_many :comments
 
-* Database creation
+## comments テーブル
 
-* Database initialization
+|Column             |Type           |Options                        |
+|-------------------|---------------|-------------------------------|
+|comment            |text           |null: false                    |
+|user               |references     |null: false, foreign_key: true |
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+belongs_to :user
+belongs_to :hiyarihatts
