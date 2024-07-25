@@ -55,10 +55,36 @@
 .main-header {
   height: 100px;
   padding: 0 40px;
+  background-color: #a9a9a9;
+  display: flex;
+  justify-content: space-between;
 }
 
-.hiyarihatts {
-  background-color: #fafafa;
-  height: calc(100vh - 100px - 90px);
-  padding: 46px 40px 0;
+.header-title {
+  color: #333;
+  font-size: 24px;
+  margin-top: 36px;
+}
+
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a {
+  text-decoration: none;
+  border: 1px solid darkred;
+  color: darkred;
+  padding: 20px;
+}
+
+.main-content {
+  height: calc(100vh - 100px);
+  background-color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  padding: 200px;
 }
