@@ -76,3 +76,5 @@ group :production do
   gem 'pry-rails', '0.3.11'
 end
 
+gem 'devise'
+
