@@ -73,6 +73,6 @@ end
 
 group :production do
   gem 'unicorn', '6.1.0'
+  gem 'pry-rails', '0.3.11'
 end
 
-gem 'pry-rails'
